@@ -40,9 +40,13 @@
 
   // ---- Live demo links + wake the free server early so it's ready when clicked
   $$('[data-demo]').forEach(a => a.href = S.hospitalDemo + (a.dataset.demo || '/login_page'));
+  $$('[data-college-demo]').forEach(a => a.href = S.collegeDemo + (a.dataset.collegeDemo || '/login_page'));
   let woke = false;
-  window.wakeDemo = () => { if (woke || !S.hospitalDemo) return; woke = true; fetch(S.hospitalDemo, { mode: 'no-cors', cache: 'no-store' }).catch(() => {}); };
-  if ($('[data-demo]')) setTimeout(window.wakeDemo, 1500);
+  window.wakeDemo = () => {
+    if (woke) return; woke = true;
+    [S.hospitalDemo, S.collegeDemo].filter(Boolean).forEach(u => fetch(u, { mode: 'no-cors', cache: 'no-store' }).catch(() => {}));
+  };
+  if ($('[data-demo], [data-college-demo]')) setTimeout(window.wakeDemo, 1500);
 
   // ---- Résumé: resume.pdf, or resume-<name>.pdf when the link has ?cv=<name>
   const resumeLinks = $$('[data-resume]');

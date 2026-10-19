@@ -19,5 +19,6 @@ window.SETTINGS = {
   resumeFile: "resume.pdf",
   resumeDownloadName: "Zainul_Faris_VK_Resume.pdf",
   hospitalDemo: "https://starcare-hospital.onrender.com",
-  hideRepos: ["ZainulFaris93.github.io", "desktop-tutorial", "Hospital-Management-System"]
+  collegeDemo: "https://college-management-hg11.onrender.com",
+  hideRepos: ["ZainulFaris93.github.io", "desktop-tutorial", "Hospital-Management-System", "College-Management-System"]
 };
