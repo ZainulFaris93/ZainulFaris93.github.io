@@ -4,9 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Zainul Faris V K | Python & Django Developer</title>
-<meta name="description" content="Zainul Faris V K: Python full stack developer (Django) with a QA background. Builds tested, deployed web apps. Try the live hospital management system. Based in Kerala, India.">
+<meta name="description" content="Zainul Faris V K: Python full stack developer (Django) currently working as a manual software tester. Try the live hospital management system. Based in Kerala, India.">
 <meta property="og:title" content="Zainul Faris V K | Python & Django Developer">
-<meta property="og:description" content="Python full stack developer who ships tested code. Live Django project with 34 unit tests, 39 Playwright browser tests and CI.">
+<meta property="og:description" content="Python and Django developer with hands-on QA experience. Try the live hospital management app.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zainulfaris93.github.io/">
 <meta property="og:image" content="https://zainulfaris93.github.io/assets/og-image.png">
@@ -107,6 +107,8 @@ h1 .acc{color:var(--acc)}
 /* HOW I BUILD */
 .how{display:grid;grid-template-columns:1fr 1.05fr;gap:40px;align-items:start}
 .pillars{display:grid;gap:14px}
+.pillars.three{grid-template-columns:repeat(3,1fr)}
+.chip.learn{border-style:dashed;color:var(--mute)}
 .pillar{display:grid;grid-template-columns:44px 1fr;gap:14px;padding:20px}
 .pillar .ic{width:44px;height:44px;border-radius:11px;display:grid;place-items:center;background:var(--acc-soft);border:1px solid var(--acc-line);color:var(--acc)}
 .pillar .ic svg{width:20px;height:20px}
@@ -153,7 +155,7 @@ h1 .acc{color:var(--acc)}
 @media(max-width:960px){
   .hero{grid-template-columns:1fr;gap:56px;padding-top:40px}
   .portrait{justify-self:center;max-width:340px}
-  .feature,.how,.about{grid-template-columns:1fr}
+  .feature,.how,.about,.pillars.three{grid-template-columns:1fr}
   .side{border-left:none;border-top:1px solid var(--line)}
   .glance{grid-template-columns:repeat(2,1fr)}
   .g:nth-child(2){border-right:none}
@@ -188,7 +190,7 @@ h1 .acc{color:var(--acc)}
     <div class="nav-r">
       <div class="links" id="links">
         <a href="#work">work</a>
-        <a href="#how">how I build</a>
+        <a href="#how">how I work</a>
         <a href="#experience">experience</a>
         <a href="#about">about</a>
         <a href="#contact">contact</a>
@@ -214,7 +216,7 @@ h1 .acc{color:var(--acc)}
         <div class="tag"><span class="dot"></span>Open to Python / Django developer roles</div>
         <h1>Zainul<br>Faris <span class="acc">V K</span></h1>
         <div class="role">Python Full Stack Developer · Django</div>
-        <p class="lead">I build web applications with <b>Python and Django</b>, from the database to the browser. My work in QA taught me how software breaks, so what I build <b>ships with tests</b>.</p>
+        <p class="lead">I build web applications with <b>Python and Django</b>, from the database to the browser. Today I work as a <b>manual software tester</b>, which has taught me a lot about how software breaks in real use.</p>
         <div class="facts">
           <span><svg class="i" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0119 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Kerala, India</span>
           <span><svg class="i" viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 012-2h4a2 2 0 012 2v2"/></svg>1+ year in industry</span>
@@ -231,7 +233,7 @@ h1 .acc{color:var(--acc)}
       <div class="portrait rv">
         <div class="frame"><img src="assets/zainul.jpg" alt="Portrait of Zainul Faris V K" width="640" height="800"></div>
         <div class="float b"><span class="dot"></span>Live project online</div>
-        <div class="float a"><span class="ok">✓</span>73 tests passing in CI</div>
+        <div class="float a"><span class="ok">★</span>IEEE Best Project Award</div>
       </div>
     </header>
 
@@ -253,18 +255,17 @@ h1 .acc{color:var(--acc)}
           <div class="badges">
             <span class="badge live"><span class="dot"></span>Live demo</span>
             <span class="badge">Full stack · Django</span>
-            <span class="badge">Tested · CI/CD</span>
           </div>
           <h3>StarCare: Hospital Management System</h3>
-          <p class="pitch">A role-based hospital web app where patients book appointments, doctors run their schedules, and admins manage the hospital. I built it end to end: design, back end, front end, testing and deployment.</p>
+          <p class="pitch">A role-based hospital web app where patients book appointments, doctors manage their schedules, and admins run the hospital. I built it with Django: the data model, the views and the pages.</p>
           <ul class="arrows">
-            <li><b>Three roles, three dashboards</b> with role-based access control on every view and API</li>
-            <li><b>Booking engine:</b> time slots, no double-booking, one visit per doctor per day, daily caps, all enforced server-side</li>
-            <li><b>AJAX workflows</b> for approvals and status changes, plus email notifications</li>
-            <li><b>34 Django tests + 39 Playwright browser tests</b> run on GitHub Actions for every push. Writing them uncovered six real bugs, now fixed.</li>
+            <li><b>Three roles, three dashboards:</b> separate admin, doctor and patient workflows with role-based login</li>
+            <li><b>Appointment booking</b> with time-slot selection that prevents double-booking and caps each doctor's day</li>
+            <li><b>AJAX</b> for approvals and status updates, plus email notifications for registration and approvals</li>
+            <li><b>Live demo</b> with sample data: log in as any role and try it</li>
           </ul>
           <div class="chips">
-            <span class="chip key">Python</span><span class="chip key">Django</span><span class="chip">SQL</span><span class="chip">JavaScript</span><span class="chip">AJAX</span><span class="chip">Playwright</span><span class="chip">GitHub Actions</span><span class="chip">Render</span>
+            <span class="chip key">Python</span><span class="chip key">Django</span><span class="chip">Django ORM</span><span class="chip">MySQL</span><span class="chip">JavaScript</span><span class="chip">AJAX</span><span class="chip">Bootstrap</span>
           </div>
           <div class="cta">
             <a class="btn primary" href="projects/hospital-management.html">Read the case study →</a>
@@ -272,10 +273,6 @@ h1 .acc{color:var(--acc)}
               <svg class="i" viewBox="0 0 24 24"><path d="M14 4h6v6M20 4L10 14M18 14v5a1 1 0 01-1 1H5a1 1 0 01-1-1V7a1 1 0 011-1h5"/></svg>Live demo
             </a>
             <a class="btn ghost" href="https://github.com/ZainulFaris93/Hospital-Management-System" target="_blank" rel="noopener">Code ↗</a>
-          </div>
-          <div class="proof">
-            <a href="https://github.com/ZainulFaris93/Hospital-Management-System/actions/workflows/tests.yml" target="_blank" rel="noopener"><img src="https://github.com/ZainulFaris93/Hospital-Management-System/actions/workflows/tests.yml/badge.svg" alt="Test status from GitHub Actions" loading="lazy"></a>
-            <a class="textlink" href="https://zainulfaris93.github.io/Hospital-Management-System/" target="_blank" rel="noopener">View the latest test report ↗</a>
           </div>
         </div>
         <div class="side">
@@ -343,28 +340,22 @@ h1 .acc{color:var(--acc)}
       </div>
     </section>
 
-    <!-- HOW I BUILD -->
+    <!-- HOW I WORK -->
     <section id="how">
-      <div class="sec-head rv"><span class="num">02.</span><h2>How I build</h2><span class="rule"></span></div>
-      <p class="sec-sub rv">I'm a developer with a tester's habits. Here's how a feature goes from idea to production in my work.</p>
-      <div class="how">
-        <div class="pillars">
-          <div class="card pillar rv">
-            <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
-            <div><b>Build</b><p>Django models, views and ORM queries on the server; JavaScript and AJAX for responsive pages. I keep business rules on the server, never only in the browser.</p></div>
-          </div>
-          <div class="card pillar rv">
-            <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
-            <div><b>Test</b><p>Unit tests for the rules, Playwright browser tests for the real user journeys. Page Objects keep the tests readable and easy to maintain.</p></div>
-          </div>
-          <div class="card pillar rv">
-            <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div>
-            <div><b>Ship</b><p>GitHub Actions runs every test on each push, and Render deploys from <code class="mono">master</code>. Settings come from the environment, so no secrets live in the code.</p></div>
-          </div>
+      <div class="sec-head rv"><span class="num">02.</span><h2>How I work</h2><span class="rule"></span></div>
+      <p class="sec-sub rv">I've worked on both sides of a release: building features as a developer, and testing them as a QA engineer.</p>
+      <div class="pillars three">
+        <div class="card pillar rv">
+          <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6"/></svg></div>
+          <div><b>Build</b><p>Python and Django on the server, with Django ORM and MySQL for data. JavaScript, AJAX and Bootstrap for the pages people use.</p></div>
         </div>
-        <div class="term rv" role="img" aria-label="Terminal replay of the hospital app's CI run: 34 Django tests OK, 39 Playwright tests passed, deployed.">
-          <div class="term-bar"><i></i><i></i><i></i><span>github actions · tests.yml</span></div>
-          <div class="term-body" id="term" aria-hidden="true"></div>
+        <div class="card pillar rv">
+          <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg></div>
+          <div><b>Test</b><p>Manual testing is my daily work: test cases written from requirements, functional and regression testing, and clear defect reports that developers can act on.</p></div>
+        </div>
+        <div class="card pillar rv">
+          <div class="ic"><svg class="i" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c3 2 9 2 12 0v-5"/></svg></div>
+          <div><b>Learning</b><p>I'm currently learning test automation with Playwright and TypeScript, starting with real application scenarios.</p></div>
         </div>
       </div>
     </section>
@@ -380,9 +371,8 @@ h1 .acc{color:var(--acc)}
             <li>Test web application features end to end across the <b>full STLC</b>: requirement analysis, test case design, execution and defect reporting.</li>
             <li>Run <b>functional and regression testing</b> across workflows and verify bug fixes before every release.</li>
             <li>Work with developers and product to <b>reproduce issues</b>, write clear defect reports and confirm fixes.</li>
-            <li>Automate real application scenarios with <b>Playwright + TypeScript</b>.</li>
+            <li>Building test automation skills with <b>Playwright and TypeScript</b> on real application scenarios.</li>
           </ul>
-          <div class="takeaway">→ What it adds to my development: I design for edge cases, validate on the server, and write the test before calling a feature done.</div>
         </div></div>
         <div class="job rv"><div class="card">
           <div class="job-top"><h3>Python Full Stack Developer</h3><span class="when">Sep 2025 to Apr 2026</span></div>
@@ -410,8 +400,8 @@ h1 .acc{color:var(--acc)}
       <div class="sec-head rv"><span class="num">04.</span><h2>About me</h2><span class="rule"></span></div>
       <div class="about">
         <div class="story rv">
-          <p>I'm a <b>Python developer from Kerala</b>. I started my career building a production accounting system in Django, and I enjoy that work most: turning a messy real-world process into a clean data model and a page that works.</p>
-          <p>I'm currently in <b>QA at ZilMoney</b>. Testing other people's software every day changed how I write my own. I now think about the failure cases first, keep rules on the server, and back features with automated tests.</p>
+          <p>I'm a <b>Python developer from Kerala</b>. I started my career at Altos Technologies, working on a production accounting system built with Django and MySQL.</p>
+          <p>Today I work as a <b>manual software tester at ZilMoney</b>: designing test cases from requirements, running functional and regression tests, and reporting defects clearly. It has made me much more aware of edge cases and how software fails in real use. I'm also learning test automation with Playwright and TypeScript.</p>
           <p>I'm looking for a <b>Python / Django developer role</b> where I can own features end to end and keep growing as an engineer.</p>
         </div>
         <div class="side-cards">
@@ -430,13 +420,13 @@ h1 .acc{color:var(--acc)}
       </div>
       <div class="skills">
         <div class="card rv"><h4>Development</h4><div class="chips">
-          <span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django ORM</span><span class="chip key">SQL / MySQL</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">AJAX</span><span class="chip">REST APIs</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap</span></div></div>
-        <div class="card rv"><h4>Testing &amp; delivery</h4><div class="chips">
-          <span class="chip key">Playwright</span><span class="chip key">Django tests</span><span class="chip">GitHub Actions</span><span class="chip">CI/CD</span><span class="chip">Git</span><span class="chip">Render</span><span class="chip">Gunicorn</span><span class="chip">Regression testing</span><span class="chip">Test case design</span><span class="chip">STLC</span></div></div>
-        <div class="card rv"><h4>AI / ML</h4><div class="chips">
-          <span class="chip">Machine Learning</span><span class="chip">Computer Vision</span><span class="chip">YOLOv8</span><span class="chip">OpenCV</span><span class="chip">Serial communication</span></div></div>
+          <span class="chip key">Python</span><span class="chip key">Django</span><span class="chip key">Django ORM</span><span class="chip key">SQL / MySQL</span><span class="chip">JavaScript</span><span class="chip">TypeScript</span><span class="chip">AJAX</span><span class="chip">REST API concepts</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap</span></div></div>
+        <div class="card rv"><h4>Testing &amp; QA</h4><div class="chips">
+          <span class="chip key">Manual testing</span><span class="chip key">Test case design</span><span class="chip key">Functional testing</span><span class="chip key">Regression testing</span><span class="chip key">Defect reporting</span><span class="chip">Bug tracking</span><span class="chip">STLC</span><span class="chip learn">Playwright · learning</span></div></div>
+        <div class="card rv"><h4>AI / ML &amp; tools</h4><div class="chips">
+          <span class="chip">Machine Learning</span><span class="chip">Computer Vision</span><span class="chip">YOLOv8</span><span class="chip">Serial communication</span><span class="chip">Git</span><span class="chip">VS Code</span></div></div>
       </div>
-      <div class="legend rv"><span class="chip key">highlighted</span> = strongest skills</div>
+      <div class="legend rv"><span class="chip key">highlighted</span> = strongest skills &nbsp;·&nbsp; <span class="chip learn">learning</span> = currently learning</div>
     </section>
 
     <!-- CONTACT -->
@@ -461,7 +451,7 @@ h1 .acc{color:var(--acc)}
   </div>
 </main>
 
-<footer><div class="wrap"><span>© <span data-year></span> Zainul Faris V K</span><span>all tests passing ✓</span></div></footer>
+<footer><div class="wrap"><span>© <span data-year></span> Zainul Faris V K</span><span>Python · Django · QA</span></div></footer>
 
 <script src="assets/site.js"></script>
 <script>
@@ -509,43 +499,6 @@ $('#hms').addEventListener('pointerenter', () => window.wakeDemo && window.wakeD
   }).join('');
 })();
 
-// Terminal: replay of the real CI run, starts when it scrolls into view
-const lines = [
-  ['p', '$ python manage.py test hospital_app', 22],
-  ['dim', 'Found 34 test(s).', 0],
-  ['ok', '..................................', 0],
-  ['ok', 'Ran 34 tests in 11.8s · OK', 0],
-  ['', '', 0],
-  ['p', '$ npx playwright test', 22],
-  ['dim', 'Running 39 tests using 1 worker', 0],
-  ['ok', '  ✓ patient books an appointment', 0],
-  ['ok', '  ✓ admin approves the pending appointment', 0],
-  ['ok', '  ✓ doctor marks it as consulted', 0],
-  ['ok', '  ✓ patient cannot open admin pages', 0],
-  ['dim', '  … 35 more', 0],
-  ['sum', '  39 passed (34.8s)', 0],
-  ['', '', 0],
-  ['p', '→ deploy to Render ✓', 14]
-];
-const term = $('#term');
-const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-let running = false;
-async function run() {
-  running = true;
-  term.innerHTML = '';
-  for (const [cls, text, speed] of lines) {
-    const d = document.createElement('div'); d.className = cls; term.appendChild(d);
-    if (reduce) { d.textContent = text || ' '; continue; }
-    if (speed) { for (const ch of text) { d.textContent += ch; await new Promise(r => setTimeout(r, speed)); } }
-    else { await new Promise(r => setTimeout(r, 260)); d.textContent = text || ' '; }
-  }
-  const c = document.createElement('span'); c.className = 'cursor'; term.lastChild.append(' ', c);
-  if (!reduce) setTimeout(run, 9000);
-}
-if ('IntersectionObserver' in window) {
-  const tio = new IntersectionObserver(es => { if (es[0].isIntersecting && !running) { run(); tio.disconnect(); } }, { threshold: .3 });
-  tio.observe(term);
-} else run();
 </script>
 </body>
 </html>
