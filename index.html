@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Zainul Faris V K — Software Tester & Developer</title>
+<meta name="description" content="Portfolio of Zainul Faris V K — Software Tester at ZilMoney, Python full stack developer, and ML enthusiast.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+
+<!--
+  ==========================================================
+  EDIT YOUR LINKS HERE  (just replace the text inside quotes)
+  ==========================================================
+-->
+<script>
+  const MY_LINKS = {
+    email:    "zainulfaris40@gmail.com",
+    github:   "https://github.com/ZainulFaris93",
+    linkedin: "https://www.linkedin.com/in/zainul-faris-vk"
+  };
+</script>
+
+<style>
+:root{
+  --bg:#0a0e0c; --panel:#111714; --panel2:#151d19; --line:#1f2b25;
+  --text:#e8f0ea; --mute:#8b9b91; --acc:#a6f25f; --acc2:#5ff2c6; --warn:#ffb547;
+  --head:'Bricolage Grotesque',system-ui,sans-serif;
+  --mono:'JetBrains Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg); color:var(--text); font-family:var(--head); line-height:1.6;
+  background-image:
+    linear-gradient(var(--line) 1px,transparent 1px),
+    linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:56px 56px; background-attachment:fixed;
+  overflow-x:hidden;
+}
+body::before{ /* vignette over grid */
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:radial-gradient(ellipse at 50% 0%,transparent 0%,var(--bg) 75%);
+}
+.glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;
+  background:radial-gradient(circle,rgba(166,242,95,.10),transparent 65%);transform:translate(-50%,-50%);transition:opacity .3s}
+main,nav,footer{position:relative;z-index:1}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+.mono{font-family:var(--mono)}
+
+/* NAV */
+nav{position:sticky;top:0;backdrop-filter:blur(12px);background:rgba(10,14,12,.72);border-bottom:1px solid var(--line);z-index:50}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:var(--mono);font-weight:600;font-size:15px}
+.logo span{color:var(--acc)}
+.links{display:flex;gap:28px;font-family:var(--mono);font-size:13px}
+.links a{color:var(--mute);transition:color .2s}
+.links a:hover{color:var(--acc)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--text);font-family:var(--mono);padding:6px 12px;border-radius:6px;cursor:pointer}
+
+/* HERO */
+.hero{min-height:calc(100vh - 64px);display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:60px 0}
+.tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--acc);
+  border:1px solid rgba(166,242,95,.3);background:rgba(166,242,95,.06);padding:6px 12px;border-radius:99px;margin-bottom:24px}
+.dot{width:7px;height:7px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--acc);animation:pulse 1.8s infinite}
+@keyframes pulse{50%{opacity:.35}}
+h1{font-size:clamp(48px,8vw,96px);line-height:.95;font-weight:800;letter-spacing:-.03em}
+h1 .out{color:transparent;-webkit-text-stroke:1.5px var(--text)}
+.lead{font-size:clamp(18px,2.2vw,22px);color:var(--mute);margin:24px 0 36px;max-width:520px}
+.lead b{color:var(--text);font-weight:600}
+.lead .strike{position:relative;color:var(--warn)}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{font-family:var(--mono);font-size:14px;padding:14px 22px;border-radius:10px;border:1px solid var(--line);transition:all .25s;display:inline-flex;gap:8px;align-items:center}
+.btn.primary{background:var(--acc);color:#0a0e0c;border-color:var(--acc);font-weight:600}
+.btn.primary:hover{transform:translateY(-2px);box-shadow:0 10px 30px -8px rgba(166,242,95,.6)}
+.btn.ghost:hover{border-color:var(--acc);color:var(--acc)}
+
+/* TERMINAL */
+.term{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;
+  box-shadow:0 30px 80px -20px rgba(0,0,0,.8),0 0 0 1px rgba(166,242,95,.05);transform:rotate(1deg);transition:transform .4s}
+.term:hover{transform:rotate(0)}
+.term-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--panel2)}
+.term-bar i{width:11px;height:11px;border-radius:50%;background:#2b3631}
+.term-bar i:nth-child(1){background:#ff5f57}.term-bar i:nth-child(2){background:#febc2e}.term-bar i:nth-child(3){background:#28c840}
+.term-bar span{margin-left:auto;font-family:var(--mono);font-size:11px;color:var(--mute)}
+.term-body{font-family:var(--mono);font-size:13.5px;padding:20px;min-height:330px;line-height:1.85}
+.term-body .p{color:var(--acc2)} .term-body .ok{color:var(--acc)} .term-body .dim{color:var(--mute)}
+.term-body .sum{color:var(--acc);font-weight:600}
+.cursor{display:inline-block;width:8px;height:16px;background:var(--acc);vertical-align:middle;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+/* STATS */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--line);border-radius:14px;background:var(--panel);overflow:hidden}
+.stat{padding:28px;border-right:1px solid var(--line)}
+.stat:last-child{border:none}
+.stat b{display:block;font-size:30px;font-weight:800;letter-spacing:-.02em}
+.stat b em{font-style:normal;color:var(--acc)}
+.stat span{font-family:var(--mono);font-size:12px;color:var(--mute)}
+
+/* SECTIONS */
+section{padding:110px 0 20px}
+.sec-head{display:flex;align-items:baseline;gap:16px;margin-bottom:48px}
+.sec-head .num{font-family:var(--mono);color:var(--acc);font-size:14px}
+.sec-head h2{font-size:clamp(34px,5vw,54px);font-weight:800;letter-spacing:-.02em;line-height:1}
+.sec-head .rule{flex:1;height:1px;background:var(--line)}
+
+/* ABOUT */
+.about{display:grid;grid-template-columns:1.4fr 1fr;gap:48px}
+.about p{font-size:19px;color:var(--mute);margin-bottom:18px}
+.about p b{color:var(--text);font-weight:600}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:26px}
+.card h4{font-family:var(--mono);font-size:12px;color:var(--mute);font-weight:400;margin-bottom:12px;text-transform:uppercase;letter-spacing:.1em}
+.edu b{display:block;font-size:20px;line-height:1.3;margin-bottom:6px}
+.edu .meta{font-family:var(--mono);font-size:13px;color:var(--mute)}
+.edu .cg{margin-top:18px;display:flex;align-items:center;gap:12px;font-family:var(--mono);font-size:13px}
+.bar{flex:1;height:6px;background:var(--line);border-radius:9px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--acc2),var(--acc));border-radius:9px;transition:width 1.6s cubic-bezier(.2,.8,.2,1)}
+.in .bar i{width:79%}
+
+/* EXPERIENCE */
+.tl{position:relative;padding-left:36px}
+.tl::before{content:"";position:absolute;left:7px;top:8px;bottom:8px;width:2px;background:linear-gradient(var(--acc),var(--line))}
+.job{position:relative;margin-bottom:28px}
+.job::before{content:"";position:absolute;left:-36px;top:30px;width:16px;height:16px;border-radius:50%;background:var(--bg);border:2px solid var(--acc)}
+.job.now::before{background:var(--acc);box-shadow:0 0 16px var(--acc)}
+.job .card{transition:border-color .3s,transform .3s}
+.job .card:hover{border-color:rgba(166,242,95,.4);transform:translateX(4px)}
+.job-top{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:4px}
+.job h3{font-size:23px;font-weight:700}
+.when{font-family:var(--mono);font-size:12px;color:var(--acc);border:1px solid rgba(166,242,95,.3);padding:4px 10px;border-radius:99px;height:fit-content}
+.org{font-family:var(--mono);font-size:13px;color:var(--mute);margin-bottom:14px}
+.job ul{list-style:none}
+.job li{color:var(--mute);padding-left:22px;position:relative;margin-bottom:7px;font-size:16px}
+.job li::before{content:"→";position:absolute;left:0;color:var(--acc);font-family:var(--mono)}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.proj{display:flex;flex-direction:column;position:relative;overflow:hidden;transition:transform .35s,border-color .35s}
+.proj::after{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),rgba(166,242,95,.09),transparent 45%);opacity:0;transition:opacity .3s;pointer-events:none}
+.proj:hover{transform:translateY(-6px);border-color:rgba(166,242,95,.4)}
+.proj:hover::after{opacity:1}
+.proj-top{display:flex;justify-content:space-between;font-family:var(--mono);font-size:12px;margin-bottom:22px}
+.tc{color:var(--mute)}
+.pass{color:var(--acc);display:flex;align-items:center;gap:6px}
+.proj h3{font-size:23px;line-height:1.2;margin-bottom:6px}
+.kind{font-family:var(--mono);font-size:12px;color:var(--acc2);margin-bottom:14px}
+.proj p{color:var(--mute);font-size:15.5px;flex:1}
+.award{margin-top:16px;font-family:var(--mono);font-size:12px;color:var(--warn);border:1px dashed rgba(255,181,71,.45);padding:8px 10px;border-radius:8px}
+.chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.chip{font-family:var(--mono);font-size:11.5px;padding:5px 10px;border-radius:6px;background:var(--panel2);border:1px solid var(--line);color:var(--text)}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.skills .card .chips{margin-top:4px}
+.skills .chip{transition:all .2s;cursor:default}
+.skills .chip:hover{border-color:var(--acc);color:var(--acc)}
+
+/* CONTACT */
+.contact{text-align:center;padding:130px 0 90px}
+.contact .mono{color:var(--acc);font-size:14px}
+.contact h2{font-size:clamp(40px,7vw,84px);font-weight:800;letter-spacing:-.03em;line-height:1;margin:18px 0 26px}
+.contact p{color:var(--mute);font-size:19px;max-width:520px;margin:0 auto 38px}
+.mail{display:inline-block;font-family:var(--mono);font-size:clamp(16px,2.6vw,24px);border-bottom:2px solid var(--acc);padding-bottom:4px;transition:color .2s}
+.mail:hover{color:var(--acc)}
+.socials{display:flex;gap:14px;justify-content:center;margin-top:36px}
+footer{border-top:1px solid var(--line);padding:26px 0;font-family:var(--mono);font-size:12px;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .hero,.about{grid-template-columns:1fr}
+  .hero{padding-top:40px;min-height:auto}
+  .term{transform:none}
+  .projects,.skills{grid-template-columns:1fr}
+  .stats{grid-template-columns:1fr}
+  .stat{border-right:none;border-bottom:1px solid var(--line)}
+  .links{display:none;position:absolute;top:64px;left:0;right:0;flex-direction:column;gap:0;background:var(--bg);border-bottom:1px solid var(--line)}
+  .links.open{display:flex}
+  .links a{padding:16px 24px;border-top:1px solid var(--line)}
+  .menu-btn{display:block}
+  .glow{display:none}
+}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="glow" id="glow"></div>
+
+<nav>
+  <div class="wrap">
+    <a href="#top" class="logo">zainul<span>.</span>faris</a>
+    <div class="links" id="links">
+      <a href="#about">01. about</a>
+      <a href="#experience">02. experience</a>
+      <a href="#projects">03. projects</a>
+      <a href="#skills">04. skills</a>
+      <a href="#contact">05. contact</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">menu</button>
+  </div>
+</nav>
+
+<main id="top">
+  <div class="wrap">
+    <!-- HERO -->
+    <header class="hero">
+      <div class="rv">
+        <div class="tag"><span class="dot"></span>Software Tester @ ZilMoney</div>
+        <h1>Zainul<br><span class="out">Faris</span> V K</h1>
+        <p class="lead">I <b>build software</b> with Python & Django, then I <span class="strike">try to break it</span> with Playwright. A developer who thinks like a tester, and a tester who thinks like a developer.</p>
+        <div class="cta">
+          <a href="#projects" class="btn primary">View my work →</a>
+          <a href="#contact" class="btn ghost">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="term rv" aria-label="Animated test runner">
+        <div class="term-bar"><i></i><i></i><i></i><span>zainul.spec.ts</span></div>
+        <div class="term-body" id="term"></div>
+      </div>
+    </header>
+
+    <div class="stats rv">
+      <div class="stat"><b>Dev <em>+</em> QA</b><span>// full stack developer turned tester</span></div>
+      <div class="stat"><b><em>Best</em> Project</b><span>// IEEE Symposium, Malabar Subsection</span></div>
+      <div class="stat"><b>B.Tech <em>IT</em></b><span>// GEC Palakkad · 7.9 CGPA</span></div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="sec-head rv"><span class="num">01.</span><h2>About me</h2><span class="rule"></span></div>
+      <div class="about">
+        <div class="rv">
+          <p>I'm a <b>Software Tester at ZilMoney</b>, where I test web applications end to end: reading requirements, designing test cases, hunting defects and making sure every release is solid.</p>
+          <p>Before that, I spent time as a <b>Python Full Stack Developer</b>, shipping features on a live accounting system with Django and MySQL. Knowing how software is built makes me better at finding where it breaks.</p>
+          <p>I also love <b>machine learning and computer vision</b>, from an award-winning landslide detection system to a YOLOv8-powered smart device.</p>
+        </div>
+        <div class="card edu rv">
+          <h4>Education</h4>
+          <b>Government Engineering College Palakkad</b>
+          <div class="meta">B.Tech in Information Technology<br>Nov 2021 — Jun 2025</div>
+          <div class="cg"><span>CGPA</span><div class="bar"><i></i></div><span>7.9</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="sec-head rv"><span class="num">02.</span><h2>Experience</h2><span class="rule"></span></div>
+      <div class="tl">
+        <div class="job now rv"><div class="card">
+          <div class="job-top"><h3>Software Tester</h3><span class="when">Apr 2026 — Present</span></div>
+          <div class="org">ZilMoney · Manjeri · Full-time</div>
+          <ul>
+            <li>Test web application features end to end using STLC: requirements, test case design, execution, defect reporting.</li>
+            <li>Run functional and regression testing across workflows and verify bug fixes before release.</li>
+            <li>Work closely with dev and product teams to reproduce issues, communicate defects clearly, and confirm fixes.</li>
+            <li>Apply Playwright + TypeScript automation to real application scenarios.</li>
+          </ul>
+        </div></div>
+        <div class="job rv"><div class="card">
+          <div class="job-top"><h3>Python Full Stack Developer</h3><span class="when">Sep 2025 — Apr 2026</span></div>
+          <div class="org">Altos Technologies · Kochi · Full-time</div>
+          <ul>
+            <li>Helped develop and deploy an accounting management system with Python and Django, from development to release.</li>
+            <li>Worked with Django ORM, MySQL, JavaScript, Bootstrap and AJAX in database-backed workflows.</li>
+            <li>Fixed defects and optimized features on a live production app, improving reliability for end users.</li>
+          </ul>
+        </div></div>
+        <div class="job rv"><div class="card">
+          <div class="job-top"><h3>Graduate Trainee</h3><span class="when">May 2023</span></div>
+          <div class="org">Revertech IT Solutions · Kochi · Training</div>
+          <ul>
+            <li>Completed industry training in Python and Machine Learning.</li>
+            <li>Built a housing price prediction model on real Bengaluru housing data.</li>
+          </ul>
+        </div></div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="sec-head rv"><span class="num">03.</span><h2>Projects</h2><span class="rule"></span></div>
+      <div class="projects">
+        <article class="card proj rv">
+          <div class="proj-top"><span class="tc">TC-01</span><span class="pass">● PASSED</span></div>
+          <h3>Real-Time Landslide Detection & Alerting</h3>
+          <div class="kind">// machine learning</div>
+          <p>Led the ML side of a real-time environmental monitoring system: models that detect landslides from Wireless Sensor Network data, integrated into a web-connected alerting platform.</p>
+          <div class="award">★ Best Project Award, IEEE Symposium (Malabar Subsection)</div>
+          <div class="chips"><span class="chip">Python</span><span class="chip">ML</span><span class="chip">WSN</span><span class="chip">Web</span></div>
+        </article>
+        <article class="card proj rv">
+          <div class="proj-top"><span class="tc">TC-02</span><span class="pass">● PASSED</span></div>
+          <h3>Hospital Management Application</h3>
+          <div class="kind">// full stack</div>
+          <p>A Django app with separate patient, doctor and admin roles. Includes time-slot appointment booking, appointment history, email confirmations and dynamic AJAX interactions.</p>
+          <div class="chips"><span class="chip">Django</span><span class="chip">MySQL</span><span class="chip">AJAX</span><span class="chip">Auth</span></div>
+        </article>
+        <article class="card proj rv">
+          <div class="proj-top"><span class="tc">TC-03</span><span class="pass">● PASSED</span></div>
+          <h3>Smart Dog Repellent System</h3>
+          <div class="kind">// computer vision</div>
+          <p>Real-time dog detection with YOLOv8, wired to a hardware response mechanism over serial communication. AI meets the physical world.</p>
+          <div class="chips"><span class="chip">YOLOv8</span><span class="chip">OpenCV</span><span class="chip">Serial</span><span class="chip">Hardware</span></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills">
+      <div class="sec-head rv"><span class="num">04.</span><h2>Skills</h2><span class="rule"></span></div>
+      <div class="skills">
+        <div class="card rv"><h4>Testing & Automation</h4><div class="chips">
+          <span class="chip">Playwright</span><span class="chip">Manual Testing</span><span class="chip">STLC</span><span class="chip">Functional Testing</span><span class="chip">Regression Testing</span><span class="chip">Test Case Design</span><span class="chip">Bug Tracking</span><span class="chip">Defect Reporting</span></div></div>
+        <div class="card rv"><h4>Development</h4><div class="chips">
+          <span class="chip">Python</span><span class="chip">TypeScript</span><span class="chip">JavaScript</span><span class="chip">SQL</span><span class="chip">Django</span><span class="chip">Django ORM</span><span class="chip">MySQL</span><span class="chip">HTML5</span><span class="chip">CSS3</span><span class="chip">Bootstrap</span><span class="chip">AJAX</span><span class="chip">REST APIs</span></div></div>
+        <div class="card rv"><h4>AI / ML & Tools</h4><div class="chips">
+          <span class="chip">Machine Learning</span><span class="chip">Computer Vision</span><span class="chip">YOLOv8</span><span class="chip">Git</span><span class="chip">VS Code</span><span class="chip">Serial Communication</span></div></div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+      <div class="rv">
+        <div class="mono">05. what's next?</div>
+        <h2>Let's build<br>something solid.</h2>
+        <p>I'm open to QA, test automation and development opportunities. My inbox is always open.</p>
+        <a class="mail" id="mailLink" href="#">email</a>
+        <div class="socials">
+          <a class="btn ghost" id="ghLink" href="#" target="_blank" rel="noopener">GitHub ↗</a>
+          <a class="btn ghost" id="liLink" href="#" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer><div class="wrap"><span>© <span id="yr"></span> Zainul Faris V K</span><span>all tests passing ✓</span></div></footer>
+
+<script>
+// links
+const m = document.getElementById('mailLink');
+m.href = 'mailto:' + MY_LINKS.email; m.textContent = MY_LINKS.email;
+document.getElementById('ghLink').href = MY_LINKS.github;
+document.getElementById('liLink').href = MY_LINKS.linkedin;
+document.getElementById('yr').textContent = new Date().getFullYear();
+
+// mobile menu
+const links = document.getElementById('links');
+document.getElementById('menuBtn').onclick = () => links.classList.toggle('open');
+links.querySelectorAll('a').forEach(a => a.onclick = () => links.classList.remove('open'));
+
+// reveal on scroll
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), { threshold: .12 });
+document.querySelectorAll('.rv').forEach((el, i) => { el.style.transitionDelay = (i % 3) * 90 + 'ms'; io.observe(el); });
+
+// cursor glow + project spotlight
+const g = document.getElementById('glow');
+addEventListener('pointermove', e => { g.style.left = e.clientX + 'px'; g.style.top = e.clientY + 'px'; });
+document.querySelectorAll('.proj').forEach(p => p.addEventListener('pointermove', e => {
+  const r = p.getBoundingClientRect();
+  p.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+  p.style.setProperty('--my', (e.clientY - r.top) + 'px');
+}));
+
+// terminal animation
+const lines = [
+  ['p', '$ npx playwright test zainul.spec.ts', 32],
+  ['dim', 'Running 6 tests using 1 worker', 0],
+  ['', '', 0],
+  ['ok', '  ✓ builds full-stack apps with Django  (1.2s)', 0],
+  ['ok', '  ✓ designs test cases from requirements  (0.8s)', 0],
+  ['ok', '  ✓ catches bugs before users do  (0.6s)', 0],
+  ['ok', '  ✓ automates flows with Playwright + TS  (1.4s)', 0],
+  ['ok', '  ✓ trains ML & computer vision models  (2.1s)', 0],
+  ['ok', '  ✓ wins awards (IEEE Best Project)  (0.3s)', 0],
+  ['', '', 0],
+  ['sum', '  6 passed (6.4s)', 0],
+  ['dim', '  ready to join your team →', 18]
+];
+const term = document.getElementById('term');
+async function run() {
+  term.innerHTML = '';
+  for (const [cls, text, speed] of lines) {
+    const d = document.createElement('div');
+    d.className = cls; d.innerHTML = '&nbsp;';
+    term.appendChild(d);
+    if (speed) {
+      d.textContent = '';
+      for (const ch of text) { d.textContent += ch; await new Promise(r => setTimeout(r, speed)); }
+    } else {
+      await new Promise(r => setTimeout(r, 380));
+      d.textContent = text || '\u00a0';
+    }
+  }
+  const c = document.createElement('span'); c.className = 'cursor'; term.lastChild.append(' ', c);
+  setTimeout(run, 7000);
+}
+run();
+</script>
+</body>
+</html>
